@@ -1,0 +1,21 @@
+
+<h1>Interpolation</h1>
+<div style="text-align: center;" appBackcolor>
+{{Heading}}
+</div>
+<div style="text-align: center;" *ngIf="display">
+    {{Heading1|uppercase}}  
+</div>
+<div *ngFor="let data of listDatas;">
+    {{data}}
+</div>
+<div *ngFor="let data of listDatas">
+    {{data|double}}
+</div>
+<h3>property binding</h3>
+<input type="text" [value]="textValueDisplay"> 
+<h3>Event binding</h3>
+<button (click)="assignValue()">submit</button>
+<h3>two way binding</h3>
+<input type="text" [(ngModel)]="textValueDisplay">
+<app-first></app-first>
